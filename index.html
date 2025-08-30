@@ -169,7 +169,7 @@
                       </div>
                       <ul
                         tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                        class="menu menu-sm dropdown-content bg-bg-carousel rounded-box z-1 mt-3 w-52 p-2 shadow"
                       >
                         <li><a href="#">Home</a></li>
                         <li>
@@ -215,8 +215,8 @@
                 </div>
               </nav>
 
-              <div class="grid grid-cols-2 space-x-4 mt-16">
-                <div class="w-full">
+              <div class="grid lg:grid-cols-2 grid-cols-1 space-x-4 mt-16">
+                <div class="w-full lg:order-1 order-2">
                   <p class="text-xs">
                     Computer-controlled digital transistorized with electronic
                     advance
@@ -234,7 +234,7 @@
                     >
                   </div>
                 </div>
-                <div class="w-full">
+                <div class="w-full lg:order-2 order-1">
                   <div class="absolute right-32 top-44">
                     <img src="images/slider/Group.png" alt="" />
                   </div>
@@ -257,11 +257,10 @@
           <!-- Slide 2: Background Image + Gradient -->
           <div
             id="slide2"
-            class="carousel-item relative w-full bg-[linear-gradient(90deg,rgba(24,24,24,1),rgba(24,24,24,0.70)_50%,rgba(24,24,24,0)_100%),url('images/others/banner.png')]"
+            class="carousel-item relative w-full bg-[linear-gradient(90deg,rgba(24,24,24,1),rgba(24,24,24,0.70)_50%,rgba(24,24,24,0)_100%),url('images/others/banner.png')] bg-no-repeat bg-cover bg-center "
           >
-            <!-- <img src="images/others/banner.png" alt=""> -->
             <div class="container">
-              <nav id="slide1" class="pt-4 pb-4">
+              <nav  class="pt-4 pb-4">
                 <div class="navbar bg-transparent">
                   <div class="flex-1">
                     <div class="dropdown">
@@ -335,20 +334,20 @@
                 </div>
               </nav>
 
-              <div class="mt-32 w-4/5">
+              <div class="mt-32 lg:w-4/5  w-full lg:px-0 px-16">
                 <h1
-                  class="text-5xl font-semibold text-white w-3/4 mb-12 leading-normal"
+                  class="lg:text-5xl text-3xl font-semibold text-white lg:w-3/4 mb-12 leading-normal"
                 >
                   Keep Your Ride Safe At Every Time
                 </h1>
                 <p
-                  class="text-base font-semibold text-white w-2/3 leading-normal mb-8"
+                  class="lg:text-base text-sm font-semibold text-white lg:w-2/3 w-full leading-normal mb-8"
                 >
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                   amet sint. Velit officia consequat duis enim velit mollit.
                   Exercitation veniam consequat sunt nostrud amet.
                 </p>
-                <div class="mt-12">
+                <div class="mt-12 w-full ">
                   <a
                     class="rounded-lg bg-[#E76F51] text-white font-semibold capitalize text-sm px-12 py-4"
                     >Purchase</a
@@ -441,16 +440,16 @@
               <div class="carousel w-full ">
                 <div id="slide01" class="carousel-item relative bg-white w-full">
                   <div
-                    class="grid lg:grid-cols-2 grid-cols-1 bg-bg-carousel2 mt-16 py-8 px-8"
+                    class="grid lg:grid-cols-2 grid-cols-1 bg-bg-carousel2 mt-16 py-8 lg:px-8 px-16 "
                   >
                     <div
-                      class="w-full justify-center flex flex-col ml-16 text-start"
+                      class="w-full justify-center flex flex-col lg:ml-16 text-start lg:order-1 order-2"
                     >
-                      <h1 class="font-bold text-5xl w-4/5 mb-5 leading-normal">
+                      <h1 class="font-bold text-5xl lg:w-4/5 w-full mb-5 leading-normal">
                         Ride-on R15 V4 with Smile
                       </h1>
                       <p
-                        class="leading-normal mb-4 w-4/5 font-semibold text-base text-gray-500"
+                        class="leading-normal mb-4 lg:w-4/5 w-full font-semibold text-base text-gray-500"
                       >
                         Amet minim mollit non deserunt ullamco est sit aliqua
                         dolor do amet sint. Velit officia consequat duis enim
@@ -477,16 +476,16 @@
 
                 <div id="slide02" class="carousel-item relative  w-full">
                   <div
-                    class="grid lg:grid-cols-2 grid-cols-1 bg-bg-carousel2 mt-16 py-8 px-8"
+                    class="grid lg:grid-cols-2 grid-cols-1 bg-bg-carousel2 mt-16 py-8 lg:px-8 px-16 lg:order-1 order-2"
                   >
                     <div
-                      class="w-full justify-center flex flex-col text-start ml-16"
+                      class="w-full justify-center flex flex-col text-start lg:ml-16 lg:order-1 order-2"
                     >
-                      <h1 class="font-bold text-5xl w-4/5 mb-5 leading-normal">
+                      <h1 class="font-bold text-5xl lg:w-4/5 w-full mb-5 leading-normal">
                         Ride-on R15 V4 with Smile
                       </h1>
                       <p
-                        class="leading-normal w-4/5 mb-4 font-semibold text-base text-gray-500"
+                        class="leading-normal lgw-4/5 w-full mb-4 font-semibold text-base text-gray-500"
                       >
                         Amet minim mollit non deserunt ullamco est sit aliqua
                         dolor do amet sint. Velit officia consequat duis enim
@@ -512,16 +511,16 @@
 
                 <div id="slide03" class="carousel-item relative  w-full">
                   <div
-                    class="grid lg:grid-cols-2 grid-cols-1  bg-bg-carousel2 mt-16 py-8 px-8 "
+                    class="grid lg:grid-cols-2 grid-cols-1  bg-bg-carousel2 mt-16 py-8 lg:px-8 px-16 lg:order-1 order-2"
                   >
                     <div
-                      class="w-full justify-center flex flex-col ml-16 text-start"
+                      class="w-full justify-center flex flex-col lg:ml-16 text-start lg:order-1 order-2"
                     >
-                      <h1 class="font-bold text-5xl w-4/5 mb-5 leading-normal">
+                      <h1 class="font-bold text-5xl lg:w-4/5 w-full mb-5 leading-normal">
                         Ride-on R15 V4 with Smile
                       </h1>
                       <p
-                        class="leading-normal mb-4 font-semibold w-4/5 text-base text-gray-500"
+                        class="leading-normal mb-4 font-semibold w-full lg:w-4/5 text-base text-gray-500"
                       >
                         Amet minim mollit non deserunt ullamco est sit aliqua
                         dolor do amet sint. Velit officia consequat duis enim
