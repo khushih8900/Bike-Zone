@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bike-Zone</title>
+    <!-- link for font awesome -->
+    <script
+      src="https://kit.fontawesome.com/bf898e1087.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- link for google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link for tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              clifford: "#da373d",
+              "bike-primary": "#E76F51",
+              "bg-carousel": " rgba(38, 70, 83, 1)",
+              "bg-carousel2": "rgba(231, 111, 81, 0.1)",
+            },
+            container: {
+              center: true,
+              padding: {
+                DEFAULT: "8%", // left & right = 10%
+                sm: "8%",
+                lg: "8%",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- link for daysUi cnd -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="font-poppins">
+    <!-- header section -->
+    <!-- <header class="mb-48">
+      <div class="w-full h-auto overflow-hidden object-cover">
+        <img class="h-fit z-0 absolute" src="images/others/banner.png" alt="" />
+      </div>
+      <div
+        class="w-full relative h-full overflow-hidden bg-[linear-gradient(90deg,rgba(24,24,24,1),rgba(24,24,24,0.82)_24%,rgba(24,24,24,0)_100%)] bg-background-bg z-10"
+      >
+        <div class="md:container md:mx-auto">
+          <nav id="slide1" class="pt-4 pb-4">
+            <div class="navbar bg-transparent">
+              <div class="flex-1">
+                <div class="dropdown">
+                  <div
+                    tabindex="0"
+                    role="button"
+                    class="btn btn-ghost lg:hidden"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-7 w-7"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h8m-8 6h16"
+                      />
+                    </svg>
+                  </div>
+                  <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                  >
+                    <li><a href="#">Home</a></li>
+                    <li>
+                      <a href="#">Shop</a>
+                    </li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <a class="font-bold text-4xl text-white">Bike-Zone</a>
+              </div>
+
+              <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-2 text-white">
+                  <li class="mr-6">
+                    <a class="px-4 py-2 text-xl font-semibold" href="#">Home</a>
+                  </li>
+                  <li class="mr-6">
+                    <a class="px-4 py-2 text-xl font-semibold" href="#">Shop</a>
+                  </li>
+                  <li class="mr-6">
+                    <a class="px-4 py-2 text-xl font-semibold" href="#">News</a>
+                  </li>
+                  <li class="mr-6">
+                    <a class="px-4 py-2 text-xl font-semibold" href="#"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="">
+                <a
+                  class="btn bg-[#E76F51] text-white font-semibold capitalize text-sm px-7 py-5"
+                  >login</a
+                >
+              </div>
+            </div>
+          </nav>
+          <h1 class="text-5xl font-bold py-40">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore,
+            adipisci!
+          </h1>
+        </div>
+      </div>
+    </header> -->
+    <header class="w-full">
+      <section class="w-full h-auto relative overflow-hidden">
+        <div class="carousel w-full h-full">
+          <!-- Slide 1: Solid Background -->
+          <div
+            id="slide1"
+            class="carousel-item relative flex flex-col w-full bg-bg-carousel text-white py-8"
+          >
+            <div class="container">
+              <nav class="pt-4 pb-4">
+                <div class="navbar bg-transparent">
+                  <div class="flex-1">
+                    <div class="dropdown">
+                      <div
+                        tabindex="0"
+                        role="button"
+                        class="btn btn-ghost lg:hidden"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-7 w-7"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16"
+                          />
+                        </svg>
+                      </div>
+                      <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                      >
+                        <li><a href="#">Home</a></li>
+                        <li>
+                          <a href="#">Shop</a>
+                        </li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                      </ul>
+                    </div>
+                    <!-- <a class="font-bold text-4xl text-white">Bike-Zone</a> -->
+                  </div>
+
+                  <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-2 text-white">
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >Home</a
+                        >
+                      </li>
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >Shop</a
+                        >
+                      </li>
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >News</a
+                        >
+                      </li>
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="">
+                    <a
+                      class="rounded-lg bg-[#E76F51] text-white font-semibold capitalize text-sm px-12 py-4"
+                      >login</a
+                    >
+                  </div>
+                </div>
+              </nav>
+
+              <div class="grid grid-cols-2 space-x-4 mt-16">
+                <div class="w-full">
+                  <p class="text-xs">
+                    Computer-controlled digital transistorized with electronic
+                    advance
+                  </p>
+                  <h1 class="text-4xl font-bold">Honda CBR 300R</h1>
+                  <p class="text-base mt-8">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit. Exercitation veniam consequat sunt nostrud amet.
+                  </p>
+                  <div class="mt-8">
+                    <a
+                      class="rounded-lg bg-[#E76F51] text-white font-semibold capitalize text-sm px-12 py-4"
+                      >Purchase</a
+                    >
+                  </div>
+                </div>
+                <div class="w-full">
+                  <div class="absolute right-32 top-44">
+                    <img src="images/slider/Group.png" alt="" />
+                  </div>
+                  <img
+                    src="images/slider/bike5.png"
+                    class="mx-auto w-fit h-fit relative"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide3" class="text-4xl ml-8">❮</a>
+                <a href="#slide2" class="text-4xl mr-8">❯</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Background Image + Gradient -->
+          <div
+            id="slide2"
+            class="carousel-item relative w-full bg-[linear-gradient(90deg,rgba(24,24,24,1),rgba(24,24,24,0.70)_50%,rgba(24,24,24,0)_100%),url('images/others/banner.png')]"
+          >
+            <!-- <img src="images/others/banner.png" alt=""> -->
+            <div class="container">
+              <nav id="slide1" class="pt-4 pb-4">
+                <div class="navbar bg-transparent">
+                  <div class="flex-1">
+                    <div class="dropdown">
+                      <div
+                        tabindex="0"
+                        role="button"
+                        class="btn btn-ghost lg:hidden"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-7 w-7"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16"
+                          />
+                        </svg>
+                      </div>
+                      <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                      >
+                        <li><a href="#">Home</a></li>
+                        <li>
+                          <a href="#">Shop</a>
+                        </li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                      </ul>
+                    </div>
+                    <a class="font-bold text-4xl capitalize text-white"
+                      >Go Ride</a
+                    >
+                  </div>
+
+                  <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-2 text-white">
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >Home</a
+                        >
+                      </li>
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >Shop</a
+                        >
+                      </li>
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >News</a
+                        >
+                      </li>
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="">
+                    <a
+                      class="rounded-lg bg-[#E76F51] text-white font-semibold capitalize text-sm px-12 py-4"
+                      >login</a
+                    >
+                  </div>
+                </div>
+              </nav>
+
+              <div class="mt-32 w-4/5">
+                <h1
+                  class="text-5xl font-semibold text-white w-3/4 mb-12 leading-normal"
+                >
+                  Keep Your Ride Safe At Every Time
+                </h1>
+                <p
+                  class="text-base font-semibold text-white w-2/3 leading-normal mb-8"
+                >
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam consequat sunt nostrud amet.
+                </p>
+                <div class="mt-12">
+                  <a
+                    class="rounded-lg bg-[#E76F51] text-white font-semibold capitalize text-sm px-12 py-4"
+                    >Purchase</a
+                  >
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide1" class="text-4xl text-white ml-8">❮</a>
+                <a href="#slide3" class="text-4xl text-white mr-8">❯</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Common Layout -->
+          <div id="slide3" class="carousel-item  w-full">
+            <div class="px-16">
+              <nav class="pt-4 pb-4 px-4">
+                <div class="navbar bg-transparent">
+                  <div class="flex-1">
+                    <div class="dropdown">
+                      <div
+                        tabindex="0"
+                        role="button"
+                        class="btn btn-ghost lg:hidden"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-7 w-7"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16"
+                          />
+                        </svg>
+                      </div>
+                      <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                      >
+                        <li><a href="#">Home</a></li>
+                        <li>
+                          <a href="#">Shop</a>
+                        </li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                      </ul>
+                    </div>
+                    <a class="font-bold text-4xl">Bike-Zone</a>
+                  </div>
+
+                  <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-2">
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >Home</a
+                        >
+                      </li>
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >Shop</a
+                        >
+                      </li>
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >News</a
+                        >
+                      </li>
+                      <li class="mr-6">
+                        <a class="px-4 py-2 text-base font-semibold" href="#"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="">
+                    <a
+                      class="rounded-lg bg-[#E76F51] text-white font-semibold capitalize text-sm px-12 py-4"
+                      >login</a
+                    >
+                  </div>
+                </div>
+              </nav>
+              <div class="carousel w-full ">
+                <div id="slide01" class="carousel-item relative bg-white w-full">
+                  <div
+                    class="grid lg:grid-cols-2 grid-cols-1 bg-bg-carousel2 mt-16 py-8 px-8"
+                  >
+                    <div
+                      class="w-full justify-center flex flex-col ml-16 text-start"
+                    >
+                      <h1 class="font-bold text-5xl w-4/5 mb-5 leading-normal">
+                        Ride-on R15 V4 with Smile
+                      </h1>
+                      <p
+                        class="leading-normal mb-4 w-4/5 font-semibold text-base text-gray-500"
+                      >
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit.
+                      </p>
+                      <button
+                        class="btn w-1/3 bg-[#E76F51] px-9 py-7 text-base text-white font-bold"
+                      >
+                        purchase
+                      </button>
+                    </div>
+                    <div class="w-full">
+                      <img class="w-fit" src="images/slider/bike1.png" alt="" />
+                    </div>
+                    
+                  </div>
+                  <div
+                      class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+                    >
+                      <a href="#slide2" class="text-5xl ">❮</a>
+                      <a href="#slide02 " class="text-5xl ">❯</a>
+                    </div>
+                </div>
+
+                <div id="slide02" class="carousel-item relative  w-full">
+                  <div
+                    class="grid lg:grid-cols-2 grid-cols-1 bg-bg-carousel2 mt-16 py-8 px-8"
+                  >
+                    <div
+                      class="w-full justify-center flex flex-col text-start ml-16"
+                    >
+                      <h1 class="font-bold text-5xl w-4/5 mb-5 leading-normal">
+                        Ride-on R15 V4 with Smile
+                      </h1>
+                      <p
+                        class="leading-normal w-4/5 mb-4 font-semibold text-base text-gray-500"
+                      >
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit.
+                      </p>
+                      <button
+                        class="btn w-1/3 bg-[#E76F51] px-9 py-7 text-base text-white font-bold"
+                      >
+                        purchase
+                      </button>
+                    </div>
+                    <div class="w-full">
+                      <img class="w-fit" src="images/slider/bike2.png" alt="" />
+                    </div>
+                  </div>
+                  <div
+                    class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+                  >
+                    <a href="#slide01" class="text-5xl ">❮</a>
+                    <a href="#slide03" class="text-5xl ">❯</a>
+                  </div>
+                </div>
+
+                <div id="slide03" class="carousel-item relative  w-full">
+                  <div
+                    class="grid lg:grid-cols-2 grid-cols-1  bg-bg-carousel2 mt-16 py-8 px-8 "
+                  >
+                    <div
+                      class="w-full justify-center flex flex-col ml-16 text-start"
+                    >
+                      <h1 class="font-bold text-5xl w-4/5 mb-5 leading-normal">
+                        Ride-on R15 V4 with Smile
+                      </h1>
+                      <p
+                        class="leading-normal mb-4 font-semibold w-4/5 text-base text-gray-500"
+                      >
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit.
+                      </p>
+                      <button
+                        class="btn w-1/3 bg-[#E76F51] px-9 py-7 text-base text-white font-bold"
+                      >
+                        purchase
+                      </button>
+                    </div>
+                    <div class="w-full">
+                      <img class="w-fit" src="images/slider/bike3.png" alt="" />
+                    </div>
+                  </div>
+                  <div
+                    class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+                  >
+                    <a href="#slide02" class="text-5xl ">❮</a>
+                    <a href="#slide1" class="text-5xl ">❯</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide2" class="text-5xl ml-8">❮</a>
+                <a href="#slide4" class="text-5xl mr-8">❯</a>
+              </div>  -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- main section -->
+    <main class="md:container md:mx-auto">
+      
+    </main>
+    <!-- footer section -->
+    <footer></footer>
+  </body>
+</html>
